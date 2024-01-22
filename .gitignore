@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# Bundling
+/dist
+
+# misc
+.DS_Store
+
+yarn-debug.log*
+yarn-error.log*
+
+# 환경변수
+.env*
+!.env*.template
