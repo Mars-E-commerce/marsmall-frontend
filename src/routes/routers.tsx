@@ -1,7 +1,8 @@
-import { Home } from '@/pages';
 import { createBrowserRouter } from 'react-router-dom';
 
-export const router = createBrowserRouter([
+import { Home } from '@/pages';
+
+export const routers = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
