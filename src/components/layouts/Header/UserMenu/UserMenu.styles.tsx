@@ -47,4 +47,8 @@ export const MenuItem = styled.li`
   }
 `;
 
-export const CartButtonBox = styled.div``;
+export const CartButtonBox = styled.div`
+  height: 100%;
+
+  position: relative;
+`;

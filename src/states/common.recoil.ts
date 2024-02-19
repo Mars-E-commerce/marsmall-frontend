@@ -14,3 +14,8 @@ export const expandsSearchInputState = atom({
   key: 'expandsSearchInputState',
   default: false,
 });
+
+export const sidebarOpenState = atom({
+  key: 'sidebarOpenState',
+  default: false,
+});
