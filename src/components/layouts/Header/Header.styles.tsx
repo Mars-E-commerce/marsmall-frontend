@@ -7,6 +7,10 @@ interface IHeaderStyleProps {
   isMobile: boolean;
 }
 
+interface ISidebarButtonStyleProps {
+  isOpen: boolean;
+}
+
 const borderStyle = (theme: Theme) => css`
   border-bottom: ${styles.border.level1}rem solid
     ${theme.color.layoutBorderColor};
@@ -50,10 +54,16 @@ export const HeaderInner = styled.div<IHeaderStyleProps>`
   padding: 0 1.6rem;
 `;
 
-export const SidebarButton = styled.div`
+export const SidebarButton = styled.div<ISidebarButtonStyleProps>`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  z-index: 1100;
+
+  transform: ${({ isOpen }) => (isOpen ? 'rotate(180deg)' : 'none')};
+
+  transition: transform 0.3s ease-out;
 
   svg {
     font-size: 3.2rem;

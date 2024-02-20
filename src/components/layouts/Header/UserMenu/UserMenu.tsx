@@ -3,10 +3,11 @@ import { memo } from 'react';
 import { MdShoppingCart } from 'react-icons/md';
 import { Link } from 'react-router-dom';
 
+import { SearchInput } from '@/components/inputs';
+
 import { URLS } from '@/constants';
 
 import { CartButtonBox, Menu, MenuItem } from './UserMenu.styles';
-import { SearchInput } from '@/components/inputs';
 
 const UserMenu = () => {
   return (
