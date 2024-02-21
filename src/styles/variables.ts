@@ -78,8 +78,8 @@ export const component = {
     height: 5.6,
     topTransition: 'transition: top 0.3s ease;',
   },
-  table: {
-    itemPadding: space.level5,
+  footer: {
+    height: 18,
   },
 };
 

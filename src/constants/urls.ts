@@ -1,3 +1,15 @@
 export const URLS = {
-  PREFIX: process.env.REACT_APP_API_PREFIX || '/',
+  API: {
+    PREFIX: process.env.REACT_APP_API_PREFIX || '/',
+  },
+  CLIENT: {
+    HOME: '/',
+    LOGIN: '/login',
+    JOIN: '/join',
+    CATEGORY: '/category',
+    CART: '/cart',
+  },
+  PARAM: {
+    CATEGORY: 'category',
+  },
 };

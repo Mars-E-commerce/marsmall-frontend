@@ -40,12 +40,6 @@ export const theme = {
     black: color.black,
 
     inputBorder: color.lightGray,
-
-    userActive: color.mediumSeaGreen,
-    userPending: color.lightGray,
-    userDeniend: color.red,
-    userInActive: color.black,
-    userWithDrawal: color.hexGold,
   },
 };
 
