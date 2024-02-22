@@ -1,3 +1,4 @@
+import { IUserSummary } from '@/types';
 import { atom } from 'recoil';
 
 export const headerBorderState = atom({
@@ -18,4 +19,9 @@ export const expandsSearchInputState = atom({
 export const sidebarOpenState = atom({
   key: 'sidebarOpenState',
   default: false,
+});
+
+export const currentUserState = atom<IUserSummary | undefined>({
+  key: 'currentUserState',
+  default: undefined,
 });
