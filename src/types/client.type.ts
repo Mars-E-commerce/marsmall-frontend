@@ -1,6 +1,6 @@
-import { To } from 'react-router';
+import { Path, To } from 'react-router';
 
-import { SNSProviderType } from './api.response.types';
+import { SNSProviderType } from './api.response.type';
 
 export interface INavMenuItem {
   label: string;
@@ -19,3 +19,7 @@ export interface ILoginProvider {
 }
 
 export type AuthType = 'join' | 'login';
+
+export interface IRedirectLocationState {
+  redirect: Path;
+}
