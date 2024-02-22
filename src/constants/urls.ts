@@ -1,6 +1,11 @@
 export const URLS = {
   API: {
     PREFIX: process.env.REACT_APP_API_PREFIX || '/',
+    AUTH: {
+      JOIN: '/auth/join',
+      KAKAO: '/auth/kakao',
+      NAVER: '/auth/naver',
+    },
   },
   CLIENT: {
     HOME: '/',
