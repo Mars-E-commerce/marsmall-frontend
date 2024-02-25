@@ -12,7 +12,11 @@ import { parseLocationToRedirect } from '@/utils';
 
 import { CartButtonBox, Menu, MenuItem } from './UserMenu.styles';
 
-const UserMenu = () => {
+interface IUserMenuProps {
+  onClickLogout: () => void;
+}
+
+const UserMenu = ({ onClickLogout }: IUserMenuProps) => {
   const location = useLocation();
   const redirect = parseLocationToRedirect(location);
   const user = useRecoilValue(currentUserState);
@@ -31,9 +35,7 @@ const UserMenu = () => {
               </Link>
             </CartButtonBox>
           </MenuItem>
-          <MenuItem>
-            <Link to={URLS.CLIENT.LOGIN}>LOGOUT</Link>
-          </MenuItem>
+          <MenuItem onClick={onClickLogout}>LOGOUT</MenuItem>
           <MenuItem>
             <li>
               <Link to="/mypage/profile">마이페이지</Link>
