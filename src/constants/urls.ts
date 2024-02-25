@@ -16,6 +16,7 @@ export const URLS = {
     HOME: '/',
     LOGIN: '/login',
     JOIN: '/join',
+    OAUTH: '/oauth',
     CATEGORY: '/category',
     CART: '/cart',
   },
