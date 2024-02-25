@@ -3,7 +3,9 @@ export interface IErrorResponse {
 }
 
 export interface ILoginResponse {
-  accessToken: string;
+  data: {
+    accessToken: string;
+  };
 }
 
 export interface IUserSummary {

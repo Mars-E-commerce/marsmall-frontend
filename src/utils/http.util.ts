@@ -8,6 +8,14 @@ export const parseRoutePathToString = (redirect: Path) => {
   return `${redirect.pathname}${redirect.search}${redirect.hash}`;
 };
 
+export const parseLocationToRedirect = (location: Location): Path => {
+  return {
+    pathname: location.pathname,
+    search: location.search,
+    hash: location.hash,
+  };
+};
+
 export const setRedirect = (location: Location) => {
   if (!isRedirectLocationState(location.state)) return;
 

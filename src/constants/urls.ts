@@ -6,6 +6,7 @@ export const URLS = {
       LOGIN: '/auth/login',
       KAKAO: '/auth/kakao',
       NAVER: '/auth/naver',
+      REFRESH: '/auth/refresh',
     },
     USER: {
       ME: '/users/me',

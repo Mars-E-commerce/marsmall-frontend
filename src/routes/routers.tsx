@@ -1,9 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
 
 import { Layout } from '@/components';
-
-import { Home, Join } from '@/pages';
 import { URLS } from '@/constants';
+import { Home, Join, Login } from '@/pages';
 
 export const routers = createBrowserRouter([
   {
@@ -17,6 +16,10 @@ export const routers = createBrowserRouter([
       {
         path: URLS.CLIENT.JOIN,
         element: <Join />,
+      },
+      {
+        path: URLS.CLIENT.LOGIN,
+        element: <Login />,
       },
     ],
   },

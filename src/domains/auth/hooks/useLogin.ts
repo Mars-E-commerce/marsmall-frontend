@@ -20,7 +20,7 @@ export const useLogin = () => {
   >({
     mutationFn: login,
     onSuccess: (response) => {
-      const { accessToken } = response.data;
+      const { accessToken } = response.data.data;
 
       setBearerToken(accessToken);
       refetch();
