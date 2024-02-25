@@ -4,9 +4,11 @@ import { Layout } from '@/components';
 import { URLS } from '@/constants';
 import { Home, Join, Login } from '@/pages';
 
+import { OAuthRedirect } from './OAuthRedirect';
+
 export const routers = createBrowserRouter([
   {
-    path: '/',
+    path: URLS.CLIENT.HOME,
     element: <Layout />,
     children: [
       {
@@ -20,6 +22,10 @@ export const routers = createBrowserRouter([
       {
         path: URLS.CLIENT.LOGIN,
         element: <Login />,
+      },
+      {
+        path: URLS.CLIENT.OAUTH,
+        element: <OAuthRedirect />,
       },
     ],
   },
