@@ -10,7 +10,11 @@ import { SidebarUserMenu } from './SidebarUserMenu';
 
 import { SidebarContainer } from './Sidebar.styles';
 
-const Sidebar = () => {
+interface ISidebarProps {
+  onClickLogout: () => void;
+}
+
+const Sidebar = ({ onClickLogout }: ISidebarProps) => {
   const sidebarRef = useRef<HTMLElement>(null);
   const [isSidebarOpen, setIsSidebarOpen] = useRecoilState(sidebarOpenState);
 
@@ -40,7 +44,7 @@ const Sidebar = () => {
       isSidebarOpen={isSidebarOpen}
       className={className}
     >
-      <SidebarUserMenu />
+      <SidebarUserMenu onClickLogout={onClickLogout} />
       <SidebarNavBar />
     </SidebarContainer>
   );

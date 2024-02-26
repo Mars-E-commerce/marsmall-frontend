@@ -8,3 +8,5 @@ export const join = async (joinForm: IJoinForm) =>
 
 export const login = async (loginForm: ILoginForm) =>
   client.post<ILoginResponse>(URLS.API.AUTH.LOGIN, loginForm);
+
+export const logout = async () => client.post(URLS.API.AUTH.LOGOUT);

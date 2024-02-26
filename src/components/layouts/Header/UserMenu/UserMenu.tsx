@@ -11,8 +11,13 @@ import { currentUserState } from '@/states';
 import { parseLocationToRedirect } from '@/utils';
 
 import { CartButtonBox, Menu, MenuItem } from './UserMenu.styles';
+import { TransparentButton } from '@/components/buttons';
 
-const UserMenu = () => {
+interface IUserMenuProps {
+  onClickLogout: () => void;
+}
+
+const UserMenu = ({ onClickLogout }: IUserMenuProps) => {
   const location = useLocation();
   const redirect = parseLocationToRedirect(location);
   const user = useRecoilValue(currentUserState);
@@ -22,17 +27,19 @@ const UserMenu = () => {
       <MenuItem>
         <SearchInput />
       </MenuItem>
+      <MenuItem>
+        <CartButtonBox>
+          <Link to={URLS.CLIENT.CART}>
+            <MdShoppingCart />
+          </Link>
+        </CartButtonBox>
+      </MenuItem>
       {user ? (
         <>
           <MenuItem>
-            <CartButtonBox>
-              <Link to={URLS.CLIENT.CART}>
-                <MdShoppingCart />
-              </Link>
-            </CartButtonBox>
-          </MenuItem>
-          <MenuItem>
-            <Link to={URLS.CLIENT.LOGIN}>LOGOUT</Link>
+            <TransparentButton onClick={onClickLogout}>
+              LOGOUT
+            </TransparentButton>
           </MenuItem>
           <MenuItem>
             <li>
@@ -45,13 +52,6 @@ const UserMenu = () => {
         </>
       ) : (
         <>
-          <MenuItem>
-            <CartButtonBox>
-              <Link to={URLS.CLIENT.CART}>
-                <MdShoppingCart />
-              </Link>
-            </CartButtonBox>
-          </MenuItem>
           <MenuItem>
             <Link to={URLS.CLIENT.LOGIN} state={{ redirect }}>
               LOGIN

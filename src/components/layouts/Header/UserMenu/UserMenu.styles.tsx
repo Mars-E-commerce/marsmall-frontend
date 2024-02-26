@@ -22,7 +22,7 @@ export const MenuItem = styled.li`
   text-transform: uppercase;
 
   &:hover {
-    a {
+    button {
       text-decoration: underline;
     }
 
@@ -32,7 +32,7 @@ export const MenuItem = styled.li`
   }
 
   a,
-  div {
+  button {
     height: 100%;
     padding: 0 0.8rem;
 

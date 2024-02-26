@@ -14,7 +14,11 @@ import { UserMenu } from './UserMenu';
 
 import { HeaderContainer, HeaderInner, SidebarButton } from './Header.styles';
 
-const Header = () => {
+interface IHeaderProps {
+  onClickLogout: () => void;
+}
+
+const Header = ({ onClickLogout }: IHeaderProps) => {
   const isMobile = useMediaQuery('(max-width: 1078px)');
   const [isSidebarOpen, setIsSidebarOpen] = useRecoilState(sidebarOpenState);
 
@@ -36,13 +40,13 @@ const Header = () => {
             <SidebarButton isOpen={isSidebarOpen} onClick={toggleSidebar}>
               {isSidebarOpen ? <MdClose /> : <MdMenu />}
             </SidebarButton>
-            <Sidebar />
+            <Sidebar onClickLogout={onClickLogout} />
           </>
         )}
         {!isMobile && (
           <>
             <NavBar />
-            <UserMenu />
+            <UserMenu onClickLogout={onClickLogout} />
           </>
         )}
       </HeaderInner>
