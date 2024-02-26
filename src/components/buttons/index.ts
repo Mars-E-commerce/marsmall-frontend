@@ -1,1 +1,2 @@
-export { default as SquareButton } from './SquareButton';
+export * from './SquareButton';
+export * from './TransparentButton';
