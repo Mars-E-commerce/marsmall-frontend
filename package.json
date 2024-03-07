@@ -1,5 +1,5 @@
 {
-  "name": "react-webpack-emotion-boilerplate",
+  "name": "marsmall-frontend",
   "version": "1.0.0",
   "description": "React + Webpack + Emotion + Recoil + Axios 보일러플레이트",
   "main": "index.js",
@@ -36,7 +36,6 @@
     "react-router-dom": "^6.20.1",
     "recoil": "^0.7.7",
     "ts-node": "^10.9.2",
-    "typescript": "^5.3.2",
     "webpack-dev-server": "^4.15.1"
   },
   "devDependencies": {

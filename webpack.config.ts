@@ -123,7 +123,7 @@ const config: IConfiguration = {
   },
   devServer: {
     historyApiFallback: true,
-    port: 3000,
+    port: process.env.REACT_APP_PORT,
     static: {
       directory: path.resolve(__dirname, PUBLIC_DIR),
     },

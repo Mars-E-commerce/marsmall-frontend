@@ -1,12 +1,9 @@
 {
+  "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "lib": ["ES2020", "DOM"],
     "target": "ES5",
     "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "sourceMap": true,
-    "strict": true,
     "resolveJsonModule": true,
     "jsx": "react-jsx",
     "baseUrl": "./src",
