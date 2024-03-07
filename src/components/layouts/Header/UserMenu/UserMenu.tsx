@@ -41,14 +41,21 @@ const UserMenu = ({ onClickLogout }: IUserMenuProps) => {
               LOGOUT
             </TransparentButton>
           </MenuItem>
-          <MenuItem>
+          {/* <MenuItem>
             <li>
               <Link to="/mypage/profile">마이페이지</Link>
             </li>
             <li>
               <Link to="/wishlist">위시리스트</Link>
             </li>
-          </MenuItem>
+          </MenuItem> */}
+          {user.data.role === 'ADMIN' && (
+            <>
+              <MenuItem>
+                <Link to={URLS.ADMIN.HOME}>관리자페이지</Link>
+              </MenuItem>
+            </>
+          )}
         </>
       ) : (
         <>

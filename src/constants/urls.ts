@@ -21,6 +21,9 @@ export const URLS = {
     CATEGORY: '/category',
     CART: '/cart',
   },
+  ADMIN: {
+    HOME: '/admin',
+  },
   PARAM: {
     CATEGORY: 'category',
   },
