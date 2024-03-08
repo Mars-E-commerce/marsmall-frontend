@@ -7,10 +7,10 @@ import { useRecoilState, useRecoilValue } from 'recoil';
 import { useMediaQuery } from '@/hooks';
 import { headerBorderState, headerHideState, sidebarOpenState } from '@/states';
 
-import { Logo } from './Logo';
-import { NavBar } from './NavBar';
-import { Sidebar } from './Sidebar';
-import { UserMenu } from './UserMenu';
+import { Logo } from '../Logo';
+import { NavBar } from '../NavBar';
+import { Sidebar } from '../Sidebar';
+import { UserMenu } from '../UserMenu';
 
 import { HeaderContainer, HeaderInner, SidebarButton } from './Header.styles';
 
