@@ -5,6 +5,7 @@ import { Theme, styles } from '@/styles';
 
 interface IHeaderStyleProps {
   isMobile: boolean;
+  isAdminPage: boolean;
 }
 
 interface ISidebarButtonStyleProps {
@@ -44,7 +45,8 @@ export const HeaderContainer = styled.header`
 
 export const HeaderInner = styled.div<IHeaderStyleProps>`
   display: flex;
-  justify-content: ${({ isMobile }) => (isMobile ? 'space-between' : 'center')};
+  justify-content: ${({ isMobile, isAdminPage }) =>
+    isMobile || isAdminPage ? 'space-between' : 'center'};
   align-items: center;
 
   height: inherit;
